@@ -23,7 +23,7 @@ Apache + php 7.1.1 + MySQL + PhpMyAdmin
     MYSQL_PASSWORD=root
     ```
 
-3. Adapt the `vhost.conf` file in `.ldocker/apache` at you convenience.
+3. Adapt the `vhost.conf` file in `.docker/apache` at you convenience.
 
 4. Build containers by typing : 
 
