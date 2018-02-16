@@ -5,7 +5,7 @@ services:
         build: .docker/apache
         container_name: php-apache
         ports :
-           - "8001:80"
+           - "8000:80"
         volumes:
             - ${WORKSPACE_APP_PATH}:/var/www/workspace
         links:
@@ -14,7 +14,7 @@ services:
     db:
         image: mysql
         ports:
-            - "3307:3306"
+            - "3306:3306"
         environment:
             MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
             MYSQL_DATABASE: ${MYSQL_DATABASE}
@@ -30,7 +30,7 @@ services:
             MYSQL_PASSWORD: ${MYSQL_PASSWORD}
             MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
         ports:
-            - "8081:80"
+            - "8080:80"
         links:
             - db
 
